@@ -1,5 +1,5 @@
 # Terminal Overlord v0.1
-## A terminally awesome todo manager
+## A terminally awesome task manager
 
 ## Features
 * Color coded deadlines
