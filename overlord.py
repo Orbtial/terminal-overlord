@@ -60,10 +60,10 @@ def listTODOs():
 
 def main():
     ui.refresh()
-    print("Overlord v0.1 by Orbtial")
-    print("======== //TODO ========")
+    print("Terminal Overlord v0.1 by Orbtial")
+    print("============ //TODO ============")
     listTODOs()
-    print("\n========================")
+    print("\n================================")
     input("Press [ENTER] to continue")
     action = ui.gList("What is your next move, Operator?", ["Add new task", "Mark as complete", "Edit a task", "Back", "Quit"], True)
     if action == 0:
