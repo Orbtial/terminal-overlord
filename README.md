@@ -1,6 +1,5 @@
 # Overlord v0.1
-### A terminally awesome todo manager
-#### By Orbtial
+## A terminally awesome todo manager
 
 ## Features
 * Color coded deadlines
@@ -13,3 +12,4 @@
 	* Just type in "5" to set the deadline in 5 days
 	* Just type in "mon" to set it for the next occuring Monday
 	* You can type "next" or "following" before a day like "mon" to shift the date accordingly!
+	
