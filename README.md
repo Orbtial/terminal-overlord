@@ -31,8 +31,6 @@ For example, to add a task (TODO)
 2. Enter [1] and then hit [ENTER] again
 3. Key in the flag, task and date.
 
-It's recommended to set an alias for convienience.
-
 ## FAQs
 Q1: Where's the delete task button? How do I delete a task?
 
