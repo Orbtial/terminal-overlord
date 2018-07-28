@@ -22,7 +22,7 @@ Running iTerm2 with Gruvbox colorscheme
 	
 ## Prerequisites
 * Mac OSX 10.13 High Sierra (not tested on Windows/Linux as of time of writing)
-* Brickscript (comes with the download)
+* brickscript (comes with the download)
 * Python 3
 
 ## Usage
