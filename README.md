@@ -1,6 +1,13 @@
 # Terminal Overlord v0.1
 ## A terminal(ly) awesome task manager
 
+## Screenshots
+Running iTerm2 with Gruvbox colorscheme
+
+![alt-text](https://github.com/Orbtial/terminal-overlord/blob/master/Screenshots/terminal-overlord%20screenshot(1).png "Task list screen")
+
+![alt-text](https://github.com/Orbtial/terminal-overlord/blob/master/Screenshots/terminal-overlord%20screenshot(2).png "Operator menu screen")
+
 ## Features
 * Color coded deadlines
 	* Red: <= 1 day
