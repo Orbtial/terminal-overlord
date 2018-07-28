@@ -1,4 +1,4 @@
-# Overlord v0.1
+# Terminal Overlord v0.1
 ## A terminally awesome todo manager
 
 ## Features
