@@ -1,4 +1,4 @@
-# Terminal Overlord v0.1
+# Terminal Overlord
 ## A terminal(ly) awesome task manager
 
 ## Screenshots
