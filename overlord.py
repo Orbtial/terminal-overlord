@@ -21,24 +21,34 @@ def clearTODOs():
         f.write("")
 
 def getDate(prompt):
-    userInput = input(prompt).lower()
-    wdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+    userInput = input(prompt).lower().split(" ")
+
+    modifiers = {"following": 14, "next": 7}
+    daynames = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+    relativedays = {"today": 0, "tmr": 1, "tomorrow": 1}
     days = -1
-    if userInput.isnumeric():
-        days = int(userInput)
-    elif userInput[-3:] in wdays:
-        if datetime.date.today().weekday() > wdays.index(userInput[-3:]):
-            days = (6-datetime.date.today().weekday()) + wdays.index(userInput[-3:]) + 1
-            if userInput[:-4] == "following": days += 7
+
+    if userInput[-1][:3] in daynames:
+
+        dayOfWeek = daynames.index(userInput[-1][:3])
+        if datetime.date.today().weekday() > dayOfWeek:
+            days = (6-datetime.date.today().weekday()) + dayOfWeek
         else:
-            days = wdays.index(userInput[-3:]) - datetime.date.today().weekday()
-            if userInput[:-4] == "next": days += 7
-            elif userInput[:-4] == "following": days += 14
+            days = dayOfWeek - datetime.date.today().weekday()
+
+        if userInput[0] in modifiers:
+            days += modifiers[userInput[0]]
+            if datetime.date.today().weekday() > dayOfWeek and userInput[0] == "next":
+                days -= 7
+
+    elif userInput[-1] in relativedays:
+        days = relativedays[userInput[-1]]
+
     if days >= 0:
         date = datetime.date.today() + datetime.timedelta(days=days)
         return("{}/{}/{}".format(date.day, date.month, int(str(date.year)[-2:])))
     else:
-        return(userInput)
+        return(" ".join(userInput))
 
 def listTODOs():
     todoData = [x.split(" • ") for x in fetchTODOs()]
