@@ -70,7 +70,7 @@ def listTODOs():
 
 def main():
     ui.refresh()
-    print("Terminal Overlord v0.1 by Orbtial")
+    print("Terminal Overlord v0.2 by Orbtial")
     print("============ //TODO ============")
     listTODOs()
     print("\n================================")
