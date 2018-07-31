@@ -44,6 +44,9 @@ def getDate(prompt):
     elif userInput[-1] in relativedays:
         days = relativedays[userInput[-1]]
 
+    elif userInput[-1].isnumeric():
+        days = int(userInput[-1])
+
     if days >= 0:
         date = datetime.date.today() + datetime.timedelta(days=days)
         return("{}/{}/{}".format(date.day, date.month, int(str(date.year)[-2:])))
@@ -56,9 +59,6 @@ def listTODOs():
         dateParts = todo[2].split("/")
         try:
             dateParts = list(map(int, dateParts))
-        except:
-            print(" • ".join(todo))
-        else:
             deadline = datetime.date(2000+dateParts[2], dateParts[1], dateParts[0])
             daysToDeadline = (deadline - datetime.date.today()).days
             if daysToDeadline > 5:
@@ -67,6 +67,8 @@ def listTODOs():
                 ui.colorise(" • ".join(todo), "yellow", True)
             else:
                 ui.colorise(" • ".join(todo), "red", True)
+        except:
+            print(" • ".join(todo))
 
 def main():
     ui.refresh()
